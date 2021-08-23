@@ -1,4 +1,7 @@
 #pragma once
+#ifndef ADAFRUITSTEPPERMOTORHAT_CPP_ADAFRUIT_MOTORHAT_H
+#define ADAFRUITSTEPPERMOTORHAT_CPP_ADAFRUIT_MOTORHAT_H
+
 #include <vector>
 #include <wiringPi.h>
 #include <softPwm.h>
@@ -82,3 +85,4 @@ public:
   void resetAll();
 };
 
+#endif // ADAFRUITSTEPPERMOTORHAT_CPP_ADAFRUIT_MOTORHAT_H

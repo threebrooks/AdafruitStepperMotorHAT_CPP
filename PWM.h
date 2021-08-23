@@ -1,4 +1,6 @@
 #pragma once
+#ifndef ADAFRUITSTEPPERMOTORHAT_CPP_PWM_H
+#define ADAFRUITSTEPPERMOTORHAT_CPP_PWM_H
 
 #include <wiringPiI2C.h>
 #include <time.h>
@@ -38,3 +40,4 @@ void setPWMFreq(int freq);
 void setPWM(int channel, int on, int off);
 void setAllPWM(int on, int off);
 
+#endif // ADAFRUITSTEPPERMOTORHAT_CPP_PWM_H

@@ -1,0 +1,3 @@
+# compiler generated objects and archives
+*.o
+*.a
