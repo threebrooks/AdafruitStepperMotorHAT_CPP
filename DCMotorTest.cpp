@@ -20,8 +20,12 @@ void ctrl_c_handler(int s){
 
 int main(int argc,char ** argv)
 {
+  if (argc != 2) {
+    std::cerr << "Not DC index specified!" << std::endl;
+    exit(-1);
+  }
   signal(SIGINT, ctrl_c_handler);
-  Adafruit_DCMotor& myMotor = hat.getDC(3); 
+  Adafruit_DCMotor& myMotor = hat.getDC(atoi(argv[1])); 
 
   // set the speed to start, from 0 (off) to 255 (max speed)
   myMotor.setSpeed(150);
