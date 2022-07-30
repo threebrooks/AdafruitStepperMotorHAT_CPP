@@ -27,6 +27,9 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra -pthread")
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
+add_library(Adafruit_MotorHAT ${LIB_SOURCES})
+target_include_directories(Adafruit_MotorHAT PUBLIC ${LIB_INCLUDES})
+
 # DCMotorTest
 add_executable(DCMotorTest DCMotorTest.cpp ${LIB_SOURCES})
 target_include_directories(DCMotorTest PUBLIC ${LIB_INCLUDES})
