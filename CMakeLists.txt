@@ -4,8 +4,8 @@ project(example)
 set(CMAKE_CXX_STANDARD 14)
 
 set(LIB_SOURCES
-  ${CMAKE_SOURCE_DIR}/Adafruit_MotorHAT.cpp
-  ${CMAKE_SOURCE_DIR}/PWM.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Adafruit_MotorHAT.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/PWM.cpp
 )
 
 set(LIB_INCLUDES
