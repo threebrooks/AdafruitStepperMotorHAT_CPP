@@ -29,6 +29,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 add_library(Adafruit_MotorHAT ${LIB_SOURCES})
 target_include_directories(Adafruit_MotorHAT PUBLIC ${LIB_INCLUDES})
+target_link_libraries(Adafruit_MotorHAT PUBLIC ${EXTERNAL_LIBS})
 
 # DCMotorTest
 add_executable(DCMotorTest DCMotorTest.cpp ${LIB_SOURCES})
