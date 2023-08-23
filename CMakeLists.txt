@@ -4,8 +4,8 @@ project(example)
 set(CMAKE_CXX_STANDARD 14)
 
 set(LIB_SOURCES
-  ${CMAKE_SOURCE_DIR}/Adafruit_MotorHAT.cpp
-  ${CMAKE_SOURCE_DIR}/PWM.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Adafruit_MotorHAT.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/PWM.cpp
 )
 
 set(LIB_INCLUDES
@@ -29,6 +29,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 add_library(Adafruit_MotorHAT ${LIB_SOURCES})
 target_include_directories(Adafruit_MotorHAT PUBLIC ${LIB_INCLUDES})
+target_link_libraries(Adafruit_MotorHAT PUBLIC ${EXTERNAL_LIBS})
 
 # DCMotorTest
 add_executable(DCMotorTest DCMotorTest.cpp ${LIB_SOURCES})
